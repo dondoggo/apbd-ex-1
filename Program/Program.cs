@@ -1,25 +1,26 @@
 ﻿using System;
+using System.Linq;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        Console.WriteLine("Witaj w programie!");
-        Console.Write("Jak masz na imię? ");
-        string imie = Console.ReadLine();
+        int[] liczby = { 1, 2, 3, 4, 5 };
 
-        Console.WriteLine($"Witaj, {imie}!");
+        double srednia = ObliczSrednia(liczby);
+        Console.WriteLine($"Średnia z tablicy wynosi: {srednia}");
 
-        Console.Write("Ile masz lat? ");
-        int wiek = int.Parse(Console.ReadLine()); 
-        int lataDo100 = 100 - wiek;
-        Console.WriteLine($"Za {lataDo100} lat będziesz miał(a) 100 lat.");
+        int maksymalna = ZnajdzMaksymalna(liczby);
+        Console.WriteLine($"Maksymalna wartość w tablicy to: {maksymalna}");
     }
 
-public static double ObliczSrednia(int[] liczby)
-{
-    return liczby.Average();
-}
+    public static double ObliczSrednia(int[] liczby)
+    {
+        return liczby.Average();
+    }
 
+    public static int ZnajdzMaksymalna(int[] liczby)
+    {
+        return liczby.Max();
+    }
 }
-
