@@ -15,4 +15,11 @@ class Program
         int lataDo100 = 100 - wiek;
         Console.WriteLine($"Za {lataDo100} lat będziesz miał(a) 100 lat.");
     }
+
+public static double ObliczSrednia(int[] liczby)
+{
+    return liczby.Average();
 }
+
+}
+
