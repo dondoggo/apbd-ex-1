@@ -7,20 +7,13 @@ class Program
     {
         int[] liczby = { 1, 2, 3, 4, 5 };
 
-        double srednia = ObliczSrednia(liczby);
+        double suma = 0;
+        foreach (var liczba in liczby)
+        {
+            suma += liczba;
+        }
+        double srednia = suma / liczby.Length;
+
         Console.WriteLine($"Średnia z tablicy wynosi: {srednia}");
-
-        int maksymalna = ZnajdzMaksymalna(liczby);
-        Console.WriteLine($"Maksymalna wartość w tablicy to: {maksymalna}");
-    }
-
-    public static double ObliczSrednia(int[] liczby)
-    {
-        return liczby.Average();
-    }
-
-    public static int ZnajdzMaksymalna(int[] liczby)
-    {
-        return liczby.Max();
     }
 }
